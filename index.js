@@ -34,7 +34,7 @@ messages.forEach(function(item) {
 module.exports = {
     parseMessage: function(id, size, buffer) {
         try {
-            var x = messages[id + 1];
+            var x = messages[id - 1];
             if (x != null) {
                 return x['message'].decode(buffer);
             } else {
