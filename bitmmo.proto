@@ -45,3 +45,18 @@ message LoginReply {
 	optional string Name = 10;
 	optional string Loginfailreason = 11;
 }
+
+message PlayerInfo {
+	optional int64 Id = 1;
+	optional string Name = 2;
+	optional int32 Color = 3;
+	repeated AttachedItem WearingitemList = 4;
+	optional int32 Bounty = 5;
+	optional string NameSubtitle = 6;
+	optional int32 TeamID = 7;
+}
+
+message AttachedItem {
+	optional int32 TilesetNo = 1;
+	optional int32 TilesetX = 2;
+}

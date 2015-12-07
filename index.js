@@ -17,30 +17,27 @@ var path = require('path');
 
 var builder = ProtoBuf.loadProtoFile(path.resolve(__dirname, 'bitmmo.proto'))
 
-var supportedmessages = ['ServerGreeting', 'Chat', 'Move', 'Login',
-                         'LoginReply',];
-var messages = {};
+var messages = [
+    { id: 1, name: 'ServerGreeting', message: null},
+    { id: 2, name: 'Chat', message: null},
+    { id: 3, name: 'Move', message: null},
+    { id: 4, name: 'Login', message: null},
+    { id: 5, name: 'LoginReply', message: null},
+    { id: 6, name: 'PlayerInfo', message: null},
+    { id: 7, name: 'AttachedItem', message: null},
+];
 
-supportedmessages.forEach(function(item) {
-    messages[item] = builder.build(item);
+messages.forEach(function(item) {
+    item['message'] = builder.build(item['name']);
 });
 
 module.exports = {
     parseMessage: function(id, size, buffer) {
         try {
-            //TODO: Replace this.
-            switch (id) {
-            case 1: //ServerGreeting
-                return messages['ServerGreeting'].decode(buffer);
-            case 2: //Chat
-                return messages['Chat'].decode(buffer);
-            case 3: //Move
-                return messages['Move'].decode(buffer);
-            case 4: //Login
-                return messages['Login'].decode(buffer);
-            case 5: //LoginReply
-                return messages['LoginReply'].decode(buffer);
-            default:
+            var x = messages[id];
+            if (x != null) {
+                return x['message'].decode(buffer);
+            } else {
                 console.log("I don't know what #%d is!", id);
                 return null;
             }
