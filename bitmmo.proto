@@ -1,0 +1,47 @@
+// This file was reverse engineered by mallard.
+// CC0 (or similar), feel free to do what you want with it.
+
+message ServerGreeting {
+	optional string Motd = 1;
+	optional int32 Minversion = 2;
+}
+
+message Chat {
+	optional string ChatText = 1;
+	optional int32 Mapid = 2;
+	optional int32 FromCharID = 3;
+	optional bool DoNotLocalize = 4;
+}
+
+message Move {
+	optional int64 ObjID = 1;
+	optional int32 Mapid = 2;
+	optional float Nowx = 3;
+	optional float Nowy = 4;
+	optional float Z = 5;
+	optional int32 Rx = 6;
+	optional int32 Ry = 7;
+}
+
+message Login {
+	optional string Name = 1;
+	optional string Password = 2;
+	optional bool KongShouldAssociate = 3;
+	optional string KongUserID = 4;
+	optional string KongAuthUUID = 5;
+	optional bool SteamShouldAssociate = 6;
+}
+
+message LoginReply {
+	optional bool Loginok = 1;
+	optional int64 Id = 2;
+	optional float X = 3;
+	optional float Y = 4;
+	optional float Z = 5;
+	optional int32 Regionx = 6;
+	optional int32 Regiony = 7;
+	optional int32 Regionz = 8;
+	optional int32 Mapid = 9;
+	optional string Name = 10;
+	optional string Loginfailreason = 11;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "bitmmojs",
+  "version": "0.1.0",
+  "description": "8BitMMO for JavaScript Developers",
+  "main": "index.js",
+  "author": "Matthew Smith <me@mattysmith.co.uk> (https://mattysmith.co.uk/)",
+  "license": "GPLv3",
+  "dependencies": {
+    "long": "~3.0.1",
+    "protobufjs": "~4.1.3"
+  }
+}
