@@ -17,22 +17,31 @@ var path = require('path');
 
 var builder = ProtoBuf.loadProtoFile(path.resolve(__dirname, 'bitmmo.proto'))
 
-var messages = [
-    { id: 1, name: 'ServerGreeting', message: null},
-    { id: 2, name: 'Chat', message: null},
-    { id: 3, name: 'Move', message: null},
-    { id: 4, name: 'Login', message: null},
-    { id: 5, name: 'LoginReply', message: null},
-    { id: 6, name: 'PlayerInfo', message: null},
-    { id: 7, name: 'AttachedItem', message: null},
-];
+//TODO: load from protobuf file
+messages = [];
+messages[1  - 1] = { id:  1, name: 'ServerGreeting', message: null};
+messages[2  - 1] = { id:  2, name: 'Chat', message: null};
+messages[3  - 1] = { id:  3, name: 'Move', message: null};
+messages[4  - 1] = { id:  4, name: 'Login', message: null};
+messages[5  - 1] = { id:  5, name: 'LoginReply', message: null};
+messages[6  - 1] = { id:  6, name: 'PlayerInfo', message: null};
+messages[7  - 1] = { id:  7, name: 'AttachedItem', message: null};
+messages[8  - 1] = { id:  9, name: 'InvAdd', message: null};
+messages[33 - 1] = { id: 33, name: 'RegisterRequest', message: null};
+messages[34 - 1] = { id: 34, name: 'RegisterSuccess', message: null};
+messages[37 - 1] = { id: 37, name: 'UseItem', message: null};
+messages[42 - 1] = { id: 42, name: 'Stats', message: null};
+
 
 messages.forEach(function(item) {
-    item['message'] = builder.build(item['name']);
+    if (item != null)
+        item['message'] = builder.build(item['name']);
 });
 
 module.exports = {
     parseMessage: function(id, size, buffer) {
+        if (id == 41) return null;
+
         try {
             var x = messages[id - 1];
             if (x != null) {

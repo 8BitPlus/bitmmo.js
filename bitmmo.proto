@@ -60,3 +60,49 @@ message AttachedItem {
 	optional int32 TilesetNo = 1;
 	optional int32 TilesetX = 2;
 }
+
+message InvAdd {
+	optional int64 Id = 1;
+	optional int32 Invtype = 2;
+	optional int32 TilesetX = 3;
+	optional string Itemname = 4;
+	optional string Itemdesc = 5;
+}
+
+message UseItem {
+	optional int64 Itemid = 1;
+	optional int32 Plrx = 2;
+	optional int32 Plry = 3;
+	optional int32 Plrz = 4;
+	optional int32 Plrmapid = 5;
+	optional int32 PlrregionX = 6;
+	optional int32 PlrregionY = 7;
+	optional int32 Orient = 8;
+	optional int32 Destx = 9;
+	optional int32 Desty = 10;
+	optional int32 Destz = 11;
+	optional int32 DestregionX = 12;
+	optional int32 DestregionY = 13;
+	optional int32 Distance = 14;
+}
+
+message Stats {
+	optional double FPS = 1;
+	optional int32 MaxTimeBetweenTwoFrames = 2;
+	optional int32 Ping = 3;
+	optional int32 BuildNum = 4;
+}
+
+message RegisterRequest {
+	optional string Name = 1;
+	optional string Password = 2;
+	optional string email = 3;
+	optional bool Newsletter = 4;
+	optional int32 ReferAcctID = 5;
+	optional int32 ReferServerID = 6;
+}
+
+message RegisterSuccess {
+	optional bool Success = 1;
+	optional string Message = 2;
+}
