@@ -29,6 +29,8 @@ messages[7  - 1] = { id:  7, name: 'AttachedItem', message: null};
 messages[8  - 1] = { id:  9, name: 'InvAdd', message: null};
 messages[33 - 1] = { id: 33, name: 'RegisterRequest', message: null};
 messages[34 - 1] = { id: 34, name: 'RegisterSuccess', message: null};
+messages[36 - 1] = { id: 36, name: 'ShopPage', message: null};
+messages[37 - 1] = { id: 37, name: 'ShopItem', message: null};
 messages[37 - 1] = { id: 37, name: 'UseItem', message: null};
 messages[42 - 1] = { id: 42, name: 'Stats', message: null};
 
