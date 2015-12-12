@@ -1,6 +1,6 @@
 {
   "name": "bitmmojs",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "8BitMMO for JavaScript Developers",
   "main": "index.js",
   "author": "Matthew Smith <me@mattysmith.co.uk> (https://mattysmith.co.uk/)",

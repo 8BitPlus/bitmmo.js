@@ -51,7 +51,6 @@ module.exports = {
             if (x != null) {
                 return x['message'].decode(buffer);
             } else {
-                console.log("I don't know what #%d is!", id);
                 return null;
             }
         } catch (ex) {
