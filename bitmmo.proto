@@ -129,3 +129,9 @@ message ShopItem {
 	optional string Name = 7;
 	optional int32 MinLevel = 8;
 }
+
+message PacketChunk {
+	optional bool IsCompressed = 1;
+	optional int32 UncompressedSize = 2;
+	optional bytes RawData = 3;
+}

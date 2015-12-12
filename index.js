@@ -34,6 +34,7 @@ messages[36 - 1] = { id: 36, name: 'ShopPage', message: null};
 messages[37 - 1] = { id: 37, name: 'ShopItem', message: null};
 messages[37 - 1] = { id: 37, name: 'UseItem', message: null};
 messages[42 - 1] = { id: 42, name: 'Stats', message: null};
+messages[58 - 1] = { id: 58, name: 'PacketChunk', message: null};
 
 
 messages.forEach(function(item) {
