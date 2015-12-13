@@ -33,6 +33,7 @@ messages[35 - 1] = { id: 35, name: 'ShopRequest', message: null};
 messages[36 - 1] = { id: 36, name: 'ShopPage', message: null};
 messages[37 - 1] = { id: 37, name: 'ShopItem', message: null};
 messages[37 - 1] = { id: 37, name: 'UseItem', message: null};
+messages[41 - 1] = { id: 41, name: 'Ping', message: null};
 messages[42 - 1] = { id: 42, name: 'Stats', message: null};
 messages[58 - 1] = { id: 58, name: 'PacketChunk', message: null};
 
@@ -44,8 +45,6 @@ messages.forEach(function(item) {
 
 module.exports = {
     parseMessage: function(id, size, buffer) {
-        if (id == 41) return null;
-
         try {
             var x = messages[id - 1];
             if (x != null) {

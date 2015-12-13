@@ -135,3 +135,8 @@ message PacketChunk {
 	optional int32 UncompressedSize = 2;
 	optional bytes RawData = 3;
 }
+
+message Ping {
+	optional int64 ClientSystemTimeMs = 1;
+	optional int64 ServerTimeMS = 2;
+}
